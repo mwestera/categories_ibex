@@ -139,7 +139,7 @@ jqueryWidget: {
                                      [correctField, correct],
                                      [timeField, answerTime - t.creationTime]]]);
             };
-            this.xl.append(li.append(a.append(ans)));
+            this.xl.append(li.append(a.append("<span>&nbsp;&nbsp;&nbsp;"+ans+"</span>")));
         }
         if ((this.presentAsScale || this.presentHorizontally) && this.rightComment) {
             this.xl.append($(document.createElement("li"))
