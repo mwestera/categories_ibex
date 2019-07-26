@@ -4,7 +4,7 @@ var practiceItemTypes = ["practice"];
 var defaults = [
     "Separator", {
         transfer: 500,
-        normalMessage: "Which pair are more related to each other? (You can use keyboard keys)",
+        normalMessage: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)",
         errorMessage: "Wrong. Please wait for the next sentence."
     },
     "DashedSentence", {
@@ -17,7 +17,7 @@ var defaults = [
         leftComment: "(Bad)", rightComment: "(Good)"
     },
     "Question", {
-        q: "Which pair are more related to each other? (You can use keyboard keys)<br><br>",
+        q: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)<br><br>",
         hasCorrect: false,
         randomOrder: true,
     },
