@@ -20,7 +20,8 @@ jqueryWidget: {
 
         var questionField = "Question (NULL if none).";
         var answerField = "Answer";
-        var correctField = "Whether or not answer was correct (NULL if N/A)";
+        var otherAnswerField = "Other answer";
+        var correctField = "Whether or not answer was the 'first' one (NULL if N/A)";
         var timeField = "Time taken to answer.";
 
         this.question = dget(this.options, "q");
@@ -195,9 +196,11 @@ jqueryWidget: {
                         correct = (correct_ans == ans ? 1 : 0);
                         t.setFlag(correct);
                     }
+                    other_answer = (n == 2 ? t.orderedAnswers[0] : t.orderedAnswers[1])
                     t.finishedCallback([[[questionField, t.question ? csv_url_encode(t.question) : "NULL"],
-                                         [answerField, csv_url_encode(ans)],
+                                         [answerField, csv_url_encode(ans.replace(' &nbsp;&#8596;&nbsp; ', ','))],
                                          [correctField, correct],
+                                         [otherAnswerField, csv_url_encode(other_answer.replace(' &nbsp;&#8596;&nbsp; ', ','))],
                                          [timeField, answerTime - t.creationTime]]]);
 
                     return false;

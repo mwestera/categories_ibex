@@ -4,6 +4,7 @@ var practiceItemTypes = ["practice"];
 var defaults = [
     "Separator", {
         transfer: 500,
+        ignoreFailure: true,
         normalMessage: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)",
         errorMessage: "Wrong. Please wait for the next sentence."
     },
@@ -18,7 +19,7 @@ var defaults = [
     },
     "Question", {
         q: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)<br><br>",
-        hasCorrect: false,
+        hasCorrect: true,
         randomOrder: true,
     },
     "Message", {
@@ -33,30 +34,14 @@ var defaults = [
 
 var items = [
 
-    ["sim", "Question", {as: ["mountain &nbsp;&#8596;&nbsp; artist", "tower &nbsp;&#8596;&nbsp; peninsula",]}],
+    [["sim",0], "Question", {as: ["prayer &nbsp;&#8596;&nbsp; bible", "king &nbsp;&#8596;&nbsp; constitution",]}],
 
 
-    ["sim", "Question", {as: ["prayer &nbsp;&#8596;&nbsp; bible", "king &nbsp;&#8596;&nbsp; constitution",]}],
-
-
-    ["sim", "Question", {as: ["sea &nbsp;&#8596;&nbsp; castle", "thoroughbred &nbsp;&#8596;&nbsp; river",]}],
+    [["sim",1], "Question", {as: ["sea &nbsp;&#8596;&nbsp; castle", "thoroughbred &nbsp;&#8596;&nbsp; river",]}],
 
 
 
-    ["sim", "Question", {as: ["statesman &nbsp;&#8596;&nbsp; president", "manor &nbsp;&#8596;&nbsp; town",]}],
-
-
-    ["sim", "Question", {as: ["mountain &nbsp;&#8596;&nbsp; artist", "tower &nbsp;&#8596;&nbsp; peninsula",]}],
-
-
-    ["sim", "Question", {as: ["prayer &nbsp;&#8596;&nbsp; bible", "king &nbsp;&#8596;&nbsp; constitution",]}],
-
-
-    ["sim", "Question", {as: ["sea &nbsp;&#8596;&nbsp; castle", "thoroughbred &nbsp;&#8596;&nbsp; river",]}],
-
-
-
-    ["sim", "Question", {as: ["statesman &nbsp;&#8596;&nbsp; president", "manor &nbsp;&#8596;&nbsp; town",]}],
+    [["sim",2], "Question", {as: ["statesman &nbsp;&#8596;&nbsp; president", "manor &nbsp;&#8596;&nbsp; town",]}],
 
 
     // New in Ibex 0.3-beta-9. You can now add a '__SendResults__' controller in your shuffle
