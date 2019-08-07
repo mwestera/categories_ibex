@@ -26,6 +26,9 @@ jqueryWidget: {
 
         this.question = dget(this.options, "q");
         this.answers = this.options.as;
+        for (var i = 0; i < this.answers.length; i++) {
+            this.answers[i] = this.answers[i].replace(";", ' &nbsp;&#8596;&nbsp; ')
+        }
 
         this.hasCorrect = dget(this.options, "hasCorrect", false);
         // hasCorrect is either false, indicating that there is no correct answer,
@@ -197,10 +200,10 @@ jqueryWidget: {
                         t.setFlag(correct);
                     }
                     other_answer = (n == 2 ? t.orderedAnswers[0] : t.orderedAnswers[1])
-                    t.finishedCallback([[[questionField, t.question ? csv_url_encode(t.question) : "NULL"],
-                                         [answerField, csv_url_encode(ans.replace(' &nbsp;&#8596;&nbsp; ', ','))],
+                    t.finishedCallback([[//[questionField, t.question ? csv_url_encode(t.question) : "NULL"],
+                                         [answerField, csv_url_encode(ans.replace(' &nbsp;&#8596;&nbsp; ', ';'))],
                                          [correctField, correct],
-                                         [otherAnswerField, csv_url_encode(other_answer.replace(' &nbsp;&#8596;&nbsp; ', ','))],
+                                         [otherAnswerField, csv_url_encode(other_answer.replace(' &nbsp;&#8596;&nbsp; ', ';'))],
                                          [timeField, answerTime - t.creationTime]]]);
 
                     return false;
