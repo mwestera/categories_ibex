@@ -3,7 +3,7 @@ var practiceItemTypes = ["practice"];
 
 var defaults = [
     "Separator", {
-        transfer: 0,
+        transfer: 300,
         ignoreFailure: true,
         normalMessage: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)",
         errorMessage: "Wrong. Please wait for the next sentence."
