@@ -1,66 +1,54 @@
 <div style="width: 40em;">
-<p style="font-size: 16pt">
-  <mark>TODO: This is the default consent form. Update this to the one approved by ethics committee for AMORE.</mark>
-</p>
-<p>
-This experiment has two parts. In the first part, you will be required to read
-a number of English sentences one word at a time. You can advance to the next
-word by pressing the space bar.
-</p>
-<p>
-In the second part, you will be asked to &ldquo;rate&rdquo; some sentences
-on a scale of 1-7 (with 1 bad and 7 good).
-</p>
-<p>
-[Privacy statement, etc., etc.]
-</p>
+    <p>
+        <mark>For this HIT you have to be a native speaker of English.</mark>
+    </p>
 
-<table>
-<tr>
-<td colspan="2" style="width: 30em; padding-bottom: 1em;">
-<i>(The form below is just a rough example showing all of the input controls that work properly
-with Ibex. Obviously it would not necessarily be appropriate to collect all of this
-data on subjects.)</i>
-</td>
-</tr>
-<tr>
-  <td>Name:</td><td><input name="name" type="text" size="30" class="obligatory" /></td>
-</tr>
-<tr>
-<td colspan="2"><label class="error" for="name"></label></td>
-</tr>
-<tr>
-  <td>Age:</td><td><input name="age" type="text" size="30" class="obligatory" /></td>
-</tr>
-<tr>
-<td colspan="2"><label class="error" for="age"></label></td>
-</tr>
-<tr>
-  <td>Sex:</td><td><input name="sex" type="radio" value="male" class="obligatory" id="csexmale" /><label for="csexmale">Male </label>
-                   <input name="sex" type="radio" value="female" id="csexfemale"/><label for="csexfemale"> Female</label>
-</tr>
-<tr>
-<td colspan="2"><label class="error" for="sex"></label></td>
-</tr>
-<tr>
-<td colspan="2" style="padding-bottom: 1em;"><input type="checkbox" name="credit" id="creditcx" /><label for="creditcx"> I am doing this experiment for credit</label></td>
-</tr>
-<tr>
-<td colspan="2" style="padding-bottom: 1em;"><input type="checkbox" class="obligatory" name="consent" id="consentcx" /><label for="consentcx"> I consent</label></td>
-</tr>
-<tr>
-<td colspan="2">
-<label class="error" for="consent"></label>
-</td>
-</tr>
-<tr>
-  <td colspan="2">Write something:</td>
-</tr>
-<tr>
-  <td colspan="2">
-    <textarea name="write_something" rows="5" cols="40"></textarea>
-  </td>
-</tr>
-</table>
+
+    <table>
+    <tr>
+      <td>MTurk ID:</td><td><input name="MTurk_ID" type="text" size="30" class="obligatory" /></td>
+    </tr>
+    <tr>
+    <td colspan="2"><label class="error" for="MTurk_ID"></label></td>
+    </tr>
+    </table>
+
+
+    <p>
+        This HIT is about whether various words are <i>related</i> to each other in meaning.</p>
+
+    <p>
+        <b>Example:</b>
+        <ol>
+          <li> <i>wheels</i> &#8596; <i>car</i>: these words are closely related, because cars have wheels.</li>
+          <li> <i>queen</i> &#8596; <i>crane</i>: these words are <i>not</i> closely related.</li>
+        </ol>
+        When comparing pair 1 vs. pair 2, you would say that pair 1 is more closely related than pair 2.
+    </p>
+
+    <p>In this HIT you will see around 100 comparisons like this. Every time you have to <b>choose the pair of words that are more closely related to each other</b>.</p>
+
+    <br>
+
+    <p>
+        Sometimes both pairs contain words related in meaning. In such cases you have to pick the pair with the more strongly related words.</p>
+
+    <p><b>Example:</b>
+        <ul>
+          <li> <i>wheels</i> &#8596; <i>car</i> vs. <i>dog</i> &#8596; <i>race</i>: the first pair should be preferred as every car has wheels but not every dog is involved in a race.</li>
+        </ul>
+    </p>
+
+    <br>
+
+    <p>It is also possible that neither pair contains closely related words. Then you have to pick the pair that contains even slightly more related words.</p>
+
+    <p><b>Example:</b>
+    <ul>
+      <li> <i>cup</i> &#8596; <i>asphalt</i> vs. <i>auction</i> &#8596; <i>car</i>: the second pair should be picked because at least fancy vintage cars can be sold at auctions.</li>
+    </ul>
+    </p>
+
+    <br>
 
 </div>

@@ -1,4 +1,4 @@
-var shuffleSequence = seq(sepWith("sep", seq(rshuffle("sim", "fil"))));
+var shuffleSequence = seq("intro", sepWith("sep", seq(rshuffle("sim", "fil"))));
 var practiceItemTypes = ["practice"];
 
 var defaults = [
@@ -21,6 +21,7 @@ var defaults = [
         q: "Which pair of categories are more related to each other? (You can use keyboard keys or mouse.)<br><br>",
         hasCorrect: true,
         randomOrder: true,
+        instructions: "(If neither pair is closely related, or both pairs are, choose the pair that is even slightly more related.)",
     },
     "Message", {
         hideProgressBar: true
@@ -64,6 +65,7 @@ var items = [
             age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
         }
     } ],
+
 [["sim", 0], "Question", {as: ["bay;lake", "web browser;general",]}],
 [["sim", 0], "Question", {as: ["bay;lake", "father;astronomer",]}],
 [["sim", 0], "Question", {as: ["bay;lake", "father;religious text",]}],
