@@ -1,0 +1,42 @@
+<div style="width: 40em">
+
+
+    <b>Which pair of categories are more related to each other?</b><br>
+    <ul>
+        <li>You can use keyboard keys or mouse.</li>
+        <li>Hover over a word to see a definition of its intended sense.</li>
+    </ul>
+    <br><br>
+
+    <input id="cat1" style="display: none"/>
+    <input id="cat2" style="display: none"/>
+    <input id="cat3" style="display: none"/>
+    <input id="cat4" style="display: none"/>
+
+
+    <di align='center' id="item" style="visibility: hidden">
+    <fieldset class="r-pill" style="font-size: 16pt">
+        <!--<div class="r-pill__group">-->
+            <!-- Ugly way of having default value empty string for radio buttons: TODO field ended up twice in results... -->
+            <!-- <input type="text" id="answered0" name="answered" value="" style="display:none"/> -->
+            <br>
+            <span class="r-pill__item">
+                <input type="radio" id="item_1" name="choice" value="1" onclick="toggleAnswerRadio(this)"/>
+                <label for="item_1">1. &nbsp;&nbsp; <span id="cat1s" class="cat"></span> &nbsp;&#8596;&nbsp; <span id="cat2s"></span></label>
+            </span><br><br>
+            <span class="r-pill__item">
+                <input type="radio" id="item_2" name="choice" value="2" onclick="toggleAnswerRadio(this)" />
+                <label for="item_2">2. &nbsp;&nbsp; <span id="cat3s"></span> &nbsp;&#8596;&nbsp; <span id="cat4s"></span></label>
+            </span>
+            <br>
+            <br>
+    </fieldset>
+
+    </div>
+
+</div>
+
+
+<script>
+    init();
+</script>
