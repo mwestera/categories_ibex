@@ -85,11 +85,9 @@ var items = [
     // Taken from: https://tmalsburg.github.io/latin-squares-with-ibex.html
     ["setcounter", "__SetCounter__", { }],
 
-    [["sim", 0], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["bla1", "bla2", "bla3", "bla4",],},],
-    [["sim", 1], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["bla1", "bla2", "bla3", "bla4",],},],
-    [["sim", 2], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["bla1", "bla2", "bla3", "bla4",],},],
-    [["sim", 3], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["bla1", "bla2", "bla3", "bla4",],},],
-    [["sim", 4], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["bla1", "bla2", "bla3", "bla4",],},],
-
+    [["sim", 0], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["a configuration of stars as seen from the earth", "a narrow channel of the sea joining two larger bodies of water", "(Roman Catholic Church) a title conferred on 33 saints who distinguished themselves through the orthodoxy of their theological teaching", "a saint who is considered to be a defender of some group or nation",],},],
+    [["sim", 1], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["a configuration of stars as seen from the earth", "a narrow channel of the sea joining two larger bodies of water", "(Roman Catholic Church) a title conferred on 33 saints who distinguished themselves through the orthodoxy of their theological teaching", "a saint who is considered to be a defender of some group or nation",],},],
+    [["sim", 2], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["a configuration of stars as seen from the earth", "a narrow channel of the sea joining two larger bodies of water", "(Roman Catholic Church) a title conferred on 33 saints who distinguished themselves through the orthodoxy of their theological teaching", "a saint who is considered to be a defender of some group or nation",],},],
+    [["sim", 3], "RelatednessForm", {categories: ["constellation", "strait", "doctor of the church", "patron saint",], definitions: ["a configuration of stars as seen from the earth", "a narrow channel of the sea joining two larger bodies of water", "(Roman Catholic Church) a title conferred on 33 saints who distinguished themselves through the orthodoxy of their theological teaching", "a saint who is considered to be a defender of some group or nation",],},],
 
 ];

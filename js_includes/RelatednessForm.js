@@ -244,10 +244,16 @@ async function init() {
     document.getElementById("cat4").value = window.categories[3];
 
     // Store visible answers
-    document.getElementById("cat1s").innerHTML = window.categories[0];
-    document.getElementById("cat2s").innerHTML = window.categories[1];
-    document.getElementById("cat3s").innerHTML = window.categories[2];
-    document.getElementById("cat4s").innerHTML = window.categories[3];
+    document.getElementById("cat1s").innerHTML = window.categories[0] + document.getElementById("cat1s").innerHTML;
+    document.getElementById("cat2s").innerHTML = window.categories[1] + document.getElementById("cat2s").innerHTML;
+    document.getElementById("cat3s").innerHTML = window.categories[2] + document.getElementById("cat3s").innerHTML;
+    document.getElementById("cat4s").innerHTML = window.categories[3] + document.getElementById("cat4s").innerHTML;
+
+    // Store definitions
+    document.getElementById("tooltip1").innerHTML = window.definitions[0];
+    document.getElementById("tooltip2").innerHTML = window.definitions[1];
+    document.getElementById("tooltip3").innerHTML = window.definitions[2];
+    document.getElementById("tooltip4").innerHTML = window.definitions[3];
 
     await sleep(200)
 

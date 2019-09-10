@@ -2,7 +2,7 @@ body {
     color: black;
     background-color: white;
     margin-left: 0;
-    margin-top: 5em;
+    margin-top: 2em;
 }
 .lindent { margin-left: 5em; }
 .sending-results {
@@ -20,7 +20,7 @@ div.bar {
 p.progress-text {
     padding-top: 0.5em;
     margin-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 0em;
     font-style: italic;
     font-size: small;
 }
@@ -130,6 +130,16 @@ button::-moz-focus-inner {
 .r-pill__item label {
 	border-radius: 2em;
 	border: 2px solid transparent;
+	background: #E2F1FD;
+	color: #000000;
+	display: block;
+	padding: .25em .75em;
+}
+
+.r-pill__item labelstatic {
+	border-radius: 2em;
+	border: 2px solid transparent;
+	background: #E2F1FD;
 	color: #000000;
 	display: block;
 	padding: .25em .75em;
@@ -227,4 +237,32 @@ button::-moz-focus-inner {
 	.r-pill[disabled] .r-pill__item input:hover ~ label {
 		text-decoration: none
 	}
+}
+
+/* Thanks to http://jsfiddle.net/dujtbh5f/ kamil335 for the following: */
+
+.hover{
+    text-align:center;
+    width:150px;
+    position:relative;
+}
+
+.tooltip{
+    display:none;
+    position:absolute;
+    border:1px solid red;
+    border-radius: 5px;
+    padding:3px;
+    font-size: 10pt;
+    top:30px;
+    left:-250px;
+    width:500px;
+}
+
+.hover:hover .tooltip{
+    display:block;
+}
+
+.hover:hover {
+    cursor:help;
 }
