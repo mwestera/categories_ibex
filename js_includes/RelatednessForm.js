@@ -163,15 +163,15 @@ jqueryWidget: {
                         return;
                     }
                     if (oneIsSelected) {
-                        rlines.push([["Field name", rgs[k][0].attr('name')],
-                                     ["Field value", rgs[k][oneThatWasSelected].attr('value')]]);
+                        rlines.push([["Cat1", window.categories[0]],
+                                    ["Cat2", window.categories[1]],
+                                    ["Cat3", window.categories[2]],
+                                    ["Cat4", window.categories[3]],
+                                     ["Choice", rgs[k][oneThatWasSelected].attr('value')],
+                                     ["_REACTION_TIME_", answerTime - t.creationTime]]);
                     }
                 }
 
-                if (t.saveReactionTime) {
-                    rlines.push([["Field name", "_REACTION_TIME_"],
-                                 ["Field value", answerTime - t.creationTime]]);
-                }
                 t.finishedCallback(rlines);
             }
         }
@@ -236,12 +236,6 @@ async function toggleAnswerRadio(element) {
 
 
 async function init() {
-
-    // Store invisible answers
-    document.getElementById("cat1").value = window.categories[0];
-    document.getElementById("cat2").value = window.categories[1];
-    document.getElementById("cat3").value = window.categories[2];
-    document.getElementById("cat4").value = window.categories[3];
 
     // Store visible answers
     document.getElementById("cat1s").innerHTML = window.categories[0] + document.getElementById("cat1s").innerHTML;

@@ -65,17 +65,11 @@ background:linear-gradient(left, #fff 0%, #fff 25%);
     </ul>
     <br><br>
 
-    <input id="cat1" name="cat1" style="display: none"/>
-    <input id="cat2" name="cat2" style="display: none"/>
-    <input id="cat3" name="cat3" style="display: none"/>
-    <input id="cat4" name="cat4" style="display: none"/>
-
-
-    <div align='center' id="item" style="visibility: hidden">
+    <div id="item" style="visibility: hidden; margin-left:20pt">
     <fieldset class="r-pill" style="font-size: 16pt">
             <br>
             <span class="r-pill__item">
-                <input type="radio" id="item_1" name="choice" value="1" onclick="toggleAnswerRadio(this)"/>
+                <input type="radio" id="item_1" name="choice" value="0" onclick="toggleAnswerRadio(this)"/>
                 <label for="item_1">1.</label>
             </span>&nbsp;&nbsp; <span id="cat1s" class="hover">
                     <div class="tooltip" id="tooltip1"></div>
@@ -84,7 +78,7 @@ background:linear-gradient(left, #fff 0%, #fff 25%);
                 </span>
         <br><br><br>
             <span class="r-pill__item">
-                <input type="radio" id="item_2" name="choice" value="2" onclick="toggleAnswerRadio(this)" />
+                <input type="radio" id="item_2" name="choice" value="1" onclick="toggleAnswerRadio(this)" />
                 <label for="item_2">2. </label>
             </span>&nbsp;&nbsp; <span id="cat3s" class="hover">
                     <div class="tooltip" id="tooltip3"></div>
