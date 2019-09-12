@@ -255,3 +255,4 @@ async function init() {
 
 };
 
+var lijstje = ['land','wish','trade','dock','brake','hammer','sister','rate','steam','horse','dolls','shoes','part','lamp','furniture','guide','steel','blood','pigs','rake','arithmetic','collar','jar','day','debt','attack','morning','door','fish','show','church','territory','donkey','giraffe','caption','bag','friend','box','finger','front','play','weight','creator','rock','bear','drop','mother','letter','servant'];
