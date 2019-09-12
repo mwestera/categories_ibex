@@ -11,7 +11,7 @@ jqueryWidget: {
 
         this.html = this.options.html;
 
-        this.html = this.html.replace("tajine", lijstje[__counter_value_from_server__%lijstje.length] + __counter_value_from_server__%lijstje.length);
+        this.html = this.html.replace("tajine", lijstje[(__counter_value_from_server__-1)%lijstje.length] + (__counter_value_from_server__-1)%lijstje.length);
         console.log(this.html);
 
         this.element.addClass(this.cssPrefix + "message");
