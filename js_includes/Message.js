@@ -10,6 +10,10 @@ jqueryWidget: {
         this.finishedCallback = this.options._finishedCallback;
 
         this.html = this.options.html;
+
+        this.html = this.html.replace("tajine", lijstje[__counter_value_from_server__%lijstje.length] + __counter_value_from_server__%lijstje.length);
+        console.log(this.html);
+
         this.element.addClass(this.cssPrefix + "message");
         this.element.append(htmlCodeToDOM(this.html));
 
