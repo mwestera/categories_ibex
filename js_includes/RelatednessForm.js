@@ -220,9 +220,12 @@ function sleep(ms) {
 window.onkeyup = function(e) {
     var key = e.keyCode ? e.keyCode : e.which;
 
-    if (key == 49 || key == 50) {
-        if (document.getElementById("item_" + (key-48))) {
-            document.getElementById("item_" + (key-48)).click()
+    if (window.can_choose) {
+
+        if (key == 49 || key == 50) {
+            if (document.getElementById("item_" + (key-48))) {
+                document.getElementById("item_" + (key-48)).click()
+            }
         }
     }
 }
@@ -231,7 +234,10 @@ window.onkeyup = function(e) {
 
 async function toggleAnswerRadio(element) {
     await sleep(100)
-    document.getElementById("continue-link").click()
+    if (window.can_choose) {
+        document.getElementById("continue-link").click();
+        window.can_choose = false;
+    }
 }
 
 
@@ -249,10 +255,15 @@ async function init() {
     document.getElementById("tooltip3").innerHTML = window.definitions[2];
     document.getElementById("tooltip4").innerHTML = window.definitions[3];
 
-    await sleep(200)
-
     document.getElementById("item").style.visibility = "visible"
+
+    await sleep(500)
+
+    document.getElementById("choice1").style.visibility = "visible"
+    document.getElementById("choice2").style.visibility = "visible"
+
+    window.can_choose = true
 
 };
 
-var lijstje = ['land','wish','trade','dock','brake','hammer','sister','rate','steam','horse','dolls','shoes','part','lamp','furniture','guide','steel','blood','pigs','rake','arithmetic','collar','jar','day','debt','attack','morning','door','fish','show','church','territory','donkey','giraffe','caption','bag','friend','box','finger','front','play','weight','creator','rock','bear','drop','mother','letter','servant'];
+var lijstje = ['dock','brake','hammer','sister','rate','steam','horse','dolls','shoes','part','lamp','furniture','guide','steel','blood','pigs','rake','arithmetic','collar','jar','day','debt','attack','morning','door','fish','show','church','territory','donkey','giraffe','caption','bag','friend','box','finger','front','play','weight','creator','rock','bear','drop','mother','letter','servant', 'land', 'wish', 'trade'];
