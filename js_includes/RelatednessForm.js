@@ -30,8 +30,10 @@ jqueryWidget: {
         window.categories = dget(this.options, "categories");
         window.definitions = dget(this.options, "definitions");
 
+        var pairs_shuffled = Math.floor(Math.random()*2) == 1
+
         // Shuffle pairs
-        if (Math.floor(Math.random()*2) == 1) {
+        if (pairs_shuffled) {
             temp0 = window.categories[0]
             temp1 = window.categories[1]
             window.categories[0] = window.categories[2]
@@ -47,7 +49,8 @@ jqueryWidget: {
         }
 
         // Shuffle items within pair
-        if (Math.floor(Math.random()*2) == 1) {
+        pair1_shuffled = Math.floor(Math.random()*2) == 1
+        if (pair1_shuffled) {
             temp0 = window.categories[0]
             window.categories[0] = window.categories[1]
             window.categories[1] = temp0
@@ -55,7 +58,9 @@ jqueryWidget: {
             window.definitions[0] = window.definitions[1]
             window.definitions[1] = temp0d
         }
-        if (Math.floor(Math.random()*2) == 1) {
+
+        pair2_shuffled = Math.floor(Math.random()*2) == 1
+        if (pair2_shuffled) {
             temp2 = window.categories[2]
             window.categories[2] = window.categories[3]
             window.categories[3] = temp2
@@ -163,12 +168,15 @@ jqueryWidget: {
                         return;
                     }
                     if (oneIsSelected) {
-                        rlines.push([["Cat1", window.categories[0]],
-                                    ["Cat2", window.categories[1]],
-                                    ["Cat3", window.categories[2]],
-                                    ["Cat4", window.categories[3]],
-                                     ["Choice", rgs[k][oneThatWasSelected].attr('value')],
-                                     ["_REACTION_TIME_", answerTime - t.creationTime]]);
+                        rlines.push([["cat1", window.categories[0]],
+                                    ["cat2", window.categories[1]],
+                                    ["cat3", window.categories[2]],
+                                    ["cat4", window.categories[3]],
+                                    ["anchor_pair", pairs_shuffled],
+                                    ["pair1_shuffled", pair1_shuffled],
+                                    ["pair2_shuffled", pair2_shuffled],
+                                     ["choice", rgs[k][oneThatWasSelected].attr('value')],
+                                     ["reaction_time", answerTime - t.creationTime]]);
                     }
                 }
 

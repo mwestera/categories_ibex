@@ -135,7 +135,7 @@ jqueryWidget: {
                 }
 
                 if (t.saveReactionTime) {
-                    rlines.push([["Field name", "_REACTION_TIME_"],
+                    rlines.push([["Field name", "reaction_time"],
                                  ["Field value", answerTime - t.creationTime]]);
                 }
                 t.finishedCallback(rlines);
