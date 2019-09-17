@@ -11,7 +11,14 @@ jqueryWidget: {
 
         this.html = this.options.html;
 
-        this.html = this.html.replace("tajine", lijstje[__counter_value_from_server__%lijstje.length] + __counter_value_from_server__%lijstje.length);
+        var checksum = 0
+        var str = window.mturk_id
+        for (var i=0; i < str.length; i++) {
+            checksum += str.charCodeAt(i)
+        }
+        checksum = checksum * (10*(HITid + 1) + (__counter_value_from_server__ +1))
+
+        this.html = this.html.replace("tajine", checksum.toString());
 
         this.element.addClass(this.cssPrefix + "message");
         this.element.append(htmlCodeToDOM(this.html));
