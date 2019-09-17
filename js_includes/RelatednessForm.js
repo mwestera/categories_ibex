@@ -263,12 +263,9 @@ async function init() {
     document.getElementById("tooltip3").innerHTML = window.definitions[2];
     document.getElementById("tooltip4").innerHTML = window.definitions[3];
 
-    document.getElementById("item").style.visibility = "visible"
-
-    await sleep(500)
-
     document.getElementById("choice1").style.visibility = "visible"
     document.getElementById("choice2").style.visibility = "visible"
+    document.getElementById("item").style.visibility = "visible"
 
     window.can_choose = true
 
