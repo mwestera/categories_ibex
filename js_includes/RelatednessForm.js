@@ -29,10 +29,11 @@ jqueryWidget: {
 
         window.categories = dget(this.options, "categories");
         window.definitions = dget(this.options, "definitions");
+        window.disambiguators = dget(this.options, "disambiguators");
 
         var pairs_shuffled = Math.floor(Math.random()*2) == 1
 
-        // Shuffle pairs
+        // Shuffle pairs     TODO OMG ugly!
         if (pairs_shuffled) {
             temp0 = window.categories[0]
             temp1 = window.categories[1]
@@ -40,12 +41,18 @@ jqueryWidget: {
             window.categories[1] = window.categories[3]
             window.categories[2] = temp0
             window.categories[3] = temp1
-            temp0d = window.definitions[0]
-            temp1d = window.definitions[1]
+            temp0 = window.definitions[0]
+            temp1 = window.definitions[1]
             window.definitions[0] = window.definitions[2]
             window.definitions[1] = window.definitions[3]
-            window.definitions[2] = temp0d
-            window.definitions[3] = temp1d
+            window.definitions[2] = temp0
+            window.definitions[3] = temp1
+            temp0 = window.disambiguators[0]
+            temp1 = window.disambiguators[1]
+            window.disambiguators[0] = window.disambiguators[2]
+            window.disambiguators[1] = window.disambiguators[3]
+            window.disambiguators[2] = temp0
+            window.disambiguators[3] = temp1
         }
 
         // Shuffle items within pair
@@ -54,9 +61,13 @@ jqueryWidget: {
             temp0 = window.categories[0]
             window.categories[0] = window.categories[1]
             window.categories[1] = temp0
-            temp0d = window.definitions[0]
+            temp0 = window.definitions[0]
             window.definitions[0] = window.definitions[1]
-            window.definitions[1] = temp0d
+            window.definitions[1] = temp0
+            temp0 = window.disambiguators[0]
+            window.disambiguators[0] = window.disambiguators[1]
+            window.disambiguators[1] = temp0
+
         }
 
         pair2_shuffled = Math.floor(Math.random()*2) == 1
@@ -64,9 +75,12 @@ jqueryWidget: {
             temp2 = window.categories[2]
             window.categories[2] = window.categories[3]
             window.categories[3] = temp2
-            temp2d = window.definitions[2]
+            temp2 = window.definitions[2]
             window.definitions[2] = window.definitions[3]
-            window.definitions[3] = temp2d
+            window.definitions[3] = temp2
+            temp2 = window.disambiguators[2]
+            window.disambiguators[2] = window.disambiguators[3]
+            window.disambiguators[3] = temp2
         }
 
 
@@ -248,14 +262,27 @@ async function toggleAnswerRadio(element) {
     }
 }
 
-
 async function init() {
 
+    // Compute disambiguators OMG loop!
+    if (window.disambiguators[0] != "") {
+        window.disambiguators[0] = " <i style='font-size:70%'>(" + window.disambiguators[0] + ")</i>";
+    }
+    if (window.disambiguators[1] != "") {
+        window.disambiguators[1] = " <i style='font-size:70%'>(" + window.disambiguators[1] + ")</i>";
+    }
+    if (window.disambiguators[2] != "") {
+        window.disambiguators[2] = " <i style='font-size:70%'>(" + window.disambiguators[2] + ")</i>";
+    }
+    if (window.disambiguators[3] != "") {
+        window.disambiguators[3] = " <i style='font-size:70%'>(" + window.disambiguators[3] + ")</i>";
+    }
+
     // Store visible answers
-    document.getElementById("cat1s").innerHTML = window.categories[0] + document.getElementById("cat1s").innerHTML;
-    document.getElementById("cat2s").innerHTML = window.categories[1] + document.getElementById("cat2s").innerHTML;
-    document.getElementById("cat3s").innerHTML = window.categories[2] + document.getElementById("cat3s").innerHTML;
-    document.getElementById("cat4s").innerHTML = window.categories[3] + document.getElementById("cat4s").innerHTML;
+    document.getElementById("cat1s").innerHTML = window.categories[0] + window.disambiguators[0] + document.getElementById("cat1s").innerHTML;
+    document.getElementById("cat2s").innerHTML = window.categories[1] + window.disambiguators[1] + document.getElementById("cat2s").innerHTML;
+    document.getElementById("cat3s").innerHTML = window.categories[2] + window.disambiguators[2] + document.getElementById("cat3s").innerHTML;
+    document.getElementById("cat4s").innerHTML = window.categories[3] + window.disambiguators[3] + document.getElementById("cat4s").innerHTML;
 
     // Store definitions
     document.getElementById("tooltip1").innerHTML = window.definitions[0];
@@ -270,5 +297,3 @@ async function init() {
     window.can_choose = true
 
 };
-
-var lijstje = ['dock','brake','hammer','sister','rate','steam','horse','dolls','shoes','part','lamp','furniture','guide','steel','blood','pigs','rake','arithmetic','collar','jar','day','debt','attack','morning','door','fish','show','church','territory','donkey','giraffe','caption','bag','friend','box','finger','front','play','weight','creator','rock','bear','drop','mother','letter','servant', 'land', 'wish', 'trade'];
