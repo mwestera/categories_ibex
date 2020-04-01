@@ -2,6 +2,8 @@
 
 Ibex code used for collecting human judgments of category relatedness, for a paper to be submitted (joint work with Abhijeet Gupta, Gemma Boleda and Sebastian Padó).
 
+Example:  http://spellout.net/ibexexps/mwestera/categories0/experiment.html
+
 ------------------------------------------------------------------------
 
 ### Original Ibex readme:
