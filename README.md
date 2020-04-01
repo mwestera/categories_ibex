@@ -1,3 +1,7 @@
+Ibex code used for collecting human judgments of category relatedness, for a paper to be submitted (joint work with Abhijeet Gupta, Gemma Boleda and Sebastian Padó).
+
+=================
+
 User documentation at https://github.com/addrummond/ibex/blob/master/docs/manual.md
 
 The following are some notes intended for developers.
