@@ -1,3 +1,5 @@
+## Ibex experiment for human judgments of category relatedness
+
 Ibex code used for collecting human judgments of category relatedness, for a paper to be submitted (joint work with Abhijeet Gupta, Gemma Boleda and Sebastian Padó).
 
 =================
